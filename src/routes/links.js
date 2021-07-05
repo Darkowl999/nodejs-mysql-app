@@ -1,6 +1,7 @@
 const express= require('express');
 const router = express.Router();
 
-console.log('estoy en el fichero links');
+const pool=require('../database');
+
 
 module.exports= router;
