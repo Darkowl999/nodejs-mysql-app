@@ -1,11 +1,16 @@
+//ESTE MODULO ES PARA PODER CONECTARME A LA BD
 const mysql= require('mysql');
-
+//ESTE MODULO SIRVE PARA USAR CALL BACKS 
 const {promisify}= require('util');
-
+//ESTE MODULO ES PAR REQUERIR LO QUE ESTA EN EL FICHERO key.js
 const {database}= require('./keys');
-
+//CON POOL PUEDO HACER LA CONEXION 
 const pool = mysql.createPool(database);
 
+//ASI ME CONECTO A LA BD
+/** PASO PARAMETROS err, y connection
+ * hago un manejo de erroes 
+ */
 pool.getConnection((err, connection)=>{
     if(err){
         if(err.code==='PROTOCOL_CONNECTION_LOST'){
