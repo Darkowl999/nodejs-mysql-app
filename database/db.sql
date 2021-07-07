@@ -1,4 +1,4 @@
-CREATE DATABASE database_links;
+inCREATE DATABASE database_links;
 
 USE database_links;
 
